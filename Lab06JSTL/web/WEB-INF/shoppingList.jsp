@@ -7,10 +7,20 @@
     </head>
     <body>
         <h1>Shopping List</h1>
-        <form method="POST" action="shoppingList">
-             <label>Username:</label>
-            <input type="text" name="first_name" value="${username}">
-            <input type="submit" value="Register name" action="register">
+        <p>Hello, ${user.username}</p>
+        <a href="login">Logout</a>
+        <h2>List</h2>
+        <form method="POST" action="add">
+            <label>Add item:</label>
+            <input type="text" name="item" value="${item}">
+            <input type="submit" value="Add" action="add">
+        </form>
+        <form method="POST" action="delete">
+            <c:forEach items="${item}" var="item">
+                <input type="checkbox" name="itemCheckbox">
+                <label>${item}</label>
+                <input type="submit" value="Delete" action="delete">
+            </c:forEach>
         </form>
     </body>
 </html>
