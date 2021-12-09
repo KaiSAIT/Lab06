@@ -8,8 +8,9 @@
     <body>
         <h1>Shopping List</h1>
         <form method="POST" action="shoppingList">
-             <label>Username:</label>
+            <label>Username:</label>
             <input type="text" name="username" value="${username}">
+            <input type="hidden" name="action" value="register">
             <input type="submit" value="Register name" action="register">
         </form>
     </body>
